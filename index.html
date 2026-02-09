@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Be My Valentine 💖</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: pink;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 15px 30px;
+            margin: 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #yesBtn {
+            background-color: red;
+            color: white;
+            transition: transform 0.3s;
+        }
+
+        #noBtn {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <h1> Hey love🥰, being with you makes every day special, but i'd love to make Valentine's Day even more special with you . Will you be my Valentine? 💕</h1>
+
+    <button id="yesBtn" onclick="sayYes()">YES</button>
+    <button id="noBtn" onclick="growYes()">NO</button>
+
+    <script>
+        let scale = 1;
+
+        function growYes() {
+            scale += 0.3;
+            document.getElementById("yesBtn").style.transform =
+                "scale(" + scale + ")";
+
+            if (scale > 3) {
+                document.getElementById("noBtn").style.display = "none";
+            }
+        }
+
+        function sayYes() {
+            alert("Hurray! 🎉 Thank you for being my Valentine 💖");
+        }
+    </script>
+
+</body>
+</html>
